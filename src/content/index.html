@@ -1,40 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+<body>
+    <header class="site-header">
+        <nav class="navigation">
+            <ul class="navigation__list navigation__list--js">
+                <li class="navigation__item">
+                    <a class="navigation__link " href="index.html">Strona główna</a></li>
+                <li class="navigation__item">
+                    <a class="navigation__link " href="index.html">Podstrona1</a></li>
+                <li class="navigation__item">
+                    <a class="navigation__link " href="index.html">Podstrona2</a></li>
+                <li class="navigation__item">
+                    <a class="navigation__link " href="index.html">Podstrona3</a></li>
+                <li class="navigation__item">
+                    <a class="navigation__link " href="index.html">Podstrona4</a></li>
+            </ul>
+        </nav>
+        <button class="navigation__switcher navigation__switcher--js" aria-label="Open the menu">=</button>
+    </header>
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+    <main id="main " class="main ">
+        <header class="header ">
+            <h1 class="header__title ">
+                Jakub Wójcik - Stron domowa, lecimy dalej!
+            </h1>
+            <button class="header__button header__button--js">
+                Change text of header
+            </button>
+        </header>
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+        <section class="about ">
+            <div class="box-test ">C ten frontend</div>
+            <div class="box ">C ten frontend</div>
+            <img src="assets/img/wtf.jpg " alt="przykładowy obrazek " class="about__image " />
+            <h2 class="about__header ">Kim jestem?</h2>
+            <p class="about__paragraph ">
+                Jestem sobie taki Jakub, klepie kod <br/> Będzie front mocno leciał teraz.<br>
+                <a class="about__link " href="#pamietniczek ">Przejdź niżej do Pamiętniczek</a>
+            </p>
+            <p class="about__paragraph about__paragraph--color ">
+                shiiiiiiit, lecimy !! auuu!
+            </p>
+        </section>
+        <div class="grid">
+            <section class="diary ">
+                <h2 class="diary__header ">Pamiętniczek</h2>
+                <section class="day ">
+                    <h3 class="day__header day_header--sunday ">Jak stworzyć prawidłowego HTML'a?</h3>
+                    <p class="day__paragraph ">
+                        Najprościej to utworzyć plik w visual studia dać "! " i ..<br>
+                        <a class="link " href="podstrona.html ">Przejdź do podstrony tego arytkułu</a>
+                    </p>
+                    <section class="hobby ">
+                        <ul class="hobby__list ">
+                            <li>nagrywanie</li>
+                            <li>terra</li>
+                            <li>prog</li>
+                            <li>traning</li>
+                            <li>Coś tam</li>
+                        </ul>
+                    </section>
 
-    <script src="js/main.js"></script>
-  </body>
+                    <section class="plan ">
+                        <ol>
+                            <li>trening</li>
+                            <li>praca</li>
+                            <li>nauka</li>
+                            <li>trening</li>
+                        </ol>
+                    </section>
+                </section>
+
+                <section class="day ">
+                    <h3 class="day_header ">CZY NAGRYWANIE TO PROSTA SPRAWA?</h3>
+                    <p class="day__paragraph ">
+                        Pewnie zależy od człowieka, ale myślę że nie takie trudne, kiedyś chce to uskutecznić.
+                    </p>
+                </section>
+                <section class="glossary">
+                    <dl>
+                        <dt>CSS</dt>
+                        <dd> style to co widziesz na stronie i ma fajnie wygladac ogolnie to</dd>
+                        <dt>html</dt>
+                        <dd> szkielet strony</dd>
+                    </dl>
+                </section>
+
+                <section class="data">
+                    <table style="width: 100%;">
+                        <caption>Opis czegoś</caption>
+                        <thead>
+                            <tr>
+                                <th>Imie i nazwisko</th>
+                                <th>Cena</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Jakub Wójcik </td>
+                                <td> a lot </td>
+                                <td> dziś </td>
+                            </tr>
+                            <tr>
+                                <td> Elo ELo</td>
+                                <td> śmiesznie </td>
+                                <td> kiedyś </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer>
+        Strona domowa Jakub Wójcik, wszystki treści są do nauki. :) ESSA!
+    </footer>
+    <script src="js/main.js "></script>
+</body>
+
 </html>

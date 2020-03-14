@@ -1,16 +1,203 @@
 @import "_normalize";
 @import "_variables";
-
-
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext');
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+    color: green;
+    background: rgb(90, 65, 65);
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    color: darkblue;
+}
+
+.header {
+    color: red;
+    &__title {
+        color: #00487C;
+        &--red {
+            color: red;
+        }
+    }
+}
+
+.site-header {
+    background: #fff;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    padding: 16px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navigation {
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        display: block;
+        margin: 0 16px;
+    }
+    &__link {
+        color: #1A936F;
+        &:hover {
+            color: pink;
+        }
+    }
+}
+
+.main {
+    padding-top: 40px;
+    width: 100%;
+    max-width: 700px;
+    margin: 32px auto;
+}
+
+.box,
+.box-test {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    padding: 10px;
+    border: 10px solid red;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.box {
+    position: sticky;
+}
+
+.box-test {
+    top: 30px;
+    background: blueviolet;
+    right: 75%;
+    z-index: 999;
+}
+
+.kok {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    float: left;
+    margin: 10px;
+}
+
+.diary {
+    clear: left;
+    &__header {
+        color: #1460AA;
+    }
+}
+
+.about {
+    &__header {
+        color: #1460aa;
+    }
+    &__paragraph {
+        padding: 16px;
+        font-size: 20px;
+        &--color {
+            color: #ff6700;
+        }
+    }
+    &__link {
+        color: #1A936F;
+    }
+}
+
+.day {
+    padding: 16px;
+    &__header {
+        margin: 0 0 16px;
+        color: #0496FF;
+        font-size: 20px;
+        &::before {
+            content: " - ";
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: yellow;
+        }
+        &::after {
+            content: " - ";
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: red;
+        }
+        &--sunday {
+            color: darkred;
+        }
+    }
+}
+
+.day__header .day_header .diary__paragraph {
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.hobby {
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+@media (min-width:641px) {
+    .navigation__switcher {
+        display: none;
+    }
+}
+
+@media (max-width:640px) {
+    .navigation {
+        &__list {
+            flex-direction: column;
+            display: none;
+            &--visible {
+                display: flex;
+            }
+        }
+        &_item {
+            margin: 16px;
+        }
+        &__switcher {
+            border: none;
+            background: none;
+            position: absolute;
+            right: 16px;
+            top: 16px;
+        }
+    }
+    .navigation_ .site-header {
+        min-height: 46px;
+        ;
+    }
 }
