@@ -13,7 +13,6 @@ html {
 
 body {
     color: green;
-    background: rgb(90, 65, 65);
     font-family: 'Lato', sans-serif;
 }
 
@@ -128,25 +127,6 @@ p {
         margin: 0 0 16px;
         color: #0496FF;
         font-size: 20px;
-        &::before {
-            content: " - ";
-            display: block;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: yellow;
-        }
-        &::after {
-            content: " - ";
-            display: block;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: red;
-        }
-        &--sunday {
-            color: darkred;
-        }
     }
 }
 
